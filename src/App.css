@@ -22,7 +22,7 @@
   padding-top: 5vmin;
 }
 
-.checkbox_container
+.button_container
 {
   display: flex;
   flex-direction: row;
@@ -33,10 +33,12 @@
   padding-top: 4vmin;
 }
 
-.checkbox
+.button
 {
-  width: 4vmin;
-  height: 4vmin;
+  width: 30vmin;
+  height: 8vmin;
+  font-size: calc(4vmin);
+  font-family:serif;
 }
 
 .water
