@@ -13,32 +13,60 @@ function App() {
 
   const handleExercisedClicked = () =>
   {
-    setExercised(true);
+    
+    if (exercised) {
+      setExercised(false);
+    } else {
+      setExercised(true);
+    }
+
+
   }
 
   const handleSleptClicked = () =>
   {
-    setSlept(true);
+
+    if (slept) {
+      setSlept(false);
+    } else {
+      setSlept(true);
+    }
   }
 
   const handleReflectedClicked = () =>
   {
-    setReflected(true);
+    if (reflected) {
+      setReflected(false);
+    } else {
+      setReflected(true);
+    }
   }
 
   const handleReadClicked = () =>
   {
-    setRead(true);
+    if (read) {
+      setRead(false);
+    } else {
+      setRead(true);
+    }
   }
 
   const handleNatureClicked = () =>
   {
-    setNature(true);
+    if (nature) {
+      setNature(false);
+    } else {
+      setNature(true);
+    }
   }
 
   const handleCleanedClicked = () =>
   {
-    setCleaned(true);
+    if (cleaned) {
+      setCleaned(false);
+    } else {
+      setCleaned(true);
+    }
   }
 
   const plusClicked = () =>
@@ -48,7 +76,16 @@ function App() {
 
   const minusClicked = () =>
   {
-    setWaterDrank(waterDrank - 1);
+    
+
+    if (waterDrank != 0) {
+      setWaterDrank(waterDrank - 1);
+    } else {
+      
+    }
+
+
+
   }
 
 
@@ -75,11 +112,13 @@ function App() {
       </div>
       <div>
       Exercised: {exercised ? 'true' : 'false'} <br />
-      Slept: {exercised ? 'true' : 'false'} <br />
-      Enjoyed Nature: {exercised ? 'true' : 'false'} <br />
-      Read: {exercised ? 'true' : 'false'} <br />
-      Cleaned: {exercised ? 'true' : 'false'} <br />
-      Reflected: {exercised ? 'true' : 'false'} <br />
+      Slept: {slept ? 'true' : 'false'} <br />
+      Reflected: {reflected ? 'true' : 'false'} <br />
+      Read: {read ? 'true' : 'false'} <br />
+      Enjoyed Nature: {nature ? 'true' : 'false'} <br />
+     
+      Cleaned: {cleaned ? 'true' : 'false'} <br />
+      
       </div>
     </div>
   );
