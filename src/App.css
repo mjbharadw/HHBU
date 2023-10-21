@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+.title
+{
+  background-color: #e5c9ff;
+  height: 10vmin; 
+  font-size: calc(9vmin);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(0, 0, 0);
+  border-top: 1px solid black;
+  border-bottom:1px solid black;
+}
+
+.subtitle
+{
+  height: 4vmin; 
+  font-size: calc(4vmin);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(0, 0, 0);
+  padding-top: 5vmin;
+}
+
+.checkbox_container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2vmin;
+  font-size: calc(4vmin);
+  font-family:serif;
+  padding-top: 4vmin;
+}
+
+.checkbox
+{
+  width: 4vmin;
+  height: 4vmin;
+}
+
+.water
+{
+  position:absolute;
+  left: 4vmin;
+  bottom: 4vmin;
+  font-size: calc(4vmin);
+  font-family:serif;
+}
+
+.plus_minus_button
+{
+  width: 4vmin;
+  height: 4vmin;
+  background-color: #e3e3e3;
+  color: black;
+  font-size: calc(3vmin);
+  font-family:serif;
+  text-align:center;
+  margin: 2vmin;
+}
+
+.submit_button
+{
+  position: absolute;
+  width: 18vmin;
+  height: 8vmin;
+  right: 4vmin;
+  bottom: 4vmin;
+  font-size: calc(3vmin);
+  font-family:serif;
+}
+
