@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self-Care Activities</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+<body class = "background">
+    <h1>Self-Care Activities</h1>
+
+    <div class="counters">
+        <h2 id="sleepcounter">0</h2>
+        <h2 id="cleancounter">0</h2>
+        <h2 id="drinkcounter">0</h2>
+        <h2 id="readcounter">0</h2>
+        <h2 id="exercisecounter">0</h2>
+        <h2 id="reflectioncounter">0</h2>
+        <h2 id="walkcounter">0</h2>
+      </div>
+
+
+    <button type="button" id ="sleep">Sleep</button>
+    <button id ="clean">Clean</button>
+    <button id ="drink">Drink</button>
+    <button id ="read">Read</button>
+    <button id ="exercise">Exercise</button>
+    <button id ="reflection">Reflection</button>
+    <button id ="walk">Walk</button>
+
+    <div class="images">   
+         <img class="img1" id="myImage1" src="img1.png" alt="Image" style.visibility = "hidden">
+         <img class="img2" id="myImage2" src="img2.png" alt="Image" style.visibility = "hidden";>
+         <img class="img3" id="myImage3" src="img3.png" alt="Image" style.visibility = "hidden";>
+         <img class="img4" id="myImage4" src="img4.png" alt="Image" style.visibility = "hidden";>
+         <img class="img5" id="myImage5" src="img5.png" alt="Image" style.visibility = "hidden";>
+         <img class="img6" id="myImage6" src="img6.png" alt="Image" style.visibility = "hidden";>
+         <img class="img7" id="myImage7" src="img7.png" alt="Image" style.visibility = "hidden";>
+     </div>
+  
+    
+</body>
+<script>
+
+
+    let sleepcount =0;
+    let cleancount =0;
+    let drinkcount =0;
+    let readcount =0;
+    let exercisecount =0;
+    let reflectioncount =0;
+    let walkcount =0;
+    
+    const displaycount = document.getElementById("sleepcounter");
+    
+
+
+    const sleepupdatecount = () => {
+        sleepcounter.textContent = sleepcount; 
+        //displaycount.innerHTML = counter;
+    }
+    const cleanupdatecount = () => {
+        cleancounter.textContent = cleancount; 
+        //displaycount.innerHTML = counter;
+    }
+    const drinkupdatecount = () => {
+        drinkcounter.textContent = drinkcount; 
+        //displaycount.innerHTML = counter;
+    }
+    const readupdatecount = () => {
+        readcounter.textContent = readcount; 
+        //displaycount.innerHTML = counter;
+    }
+    const exerciseupdatecount = () => {
+        exercisecounter.textContent = exercisecount; 
+        //displaycount.innerHTML = counter;
+    }
+    const reflectionupdatecount = () => {
+        reflectioncounter.textContent = reflectioncount; 
+        //displaycount.innerHTML = counter;
+    }
+    const walkupdatecount = () => {
+        walkcounter.textContent = walkcount; 
+        //displaycount.innerHTML = counter;
+    }
+    
+
+    
+    function showImage(image) {
+        image.style.visibility = "visible";
+        }
+
+        // Function to hide the image
+    function hideImage(image) {
+        image.style.visibility = "hidden";
+        }
+  
+
+
+
+    //const displaycount = document.getElementById("count");
+
+
+    //const updatecount = () => {
+      //  count.textContent = counter; 
+        //displaycount.innerHTML = counter;
+   // }
+    
+    document.getElementById("sleep").addEventListener("click", function() {
+        sleepcount += 1;
+        sleepupdatecount();
+        console.log(sleepcount);
+        
+        if (sleepcount >= 1){
+        showImage(document.getElementById("myImage1"));
+        }else{
+            hideImage(document.getElementById("myImage1"));
+        }
+   })
+
+   
+
+    document.getElementById("clean").addEventListener("click", function() {
+        cleancount += 1;
+        cleanupdatecount();
+        console.log(cleancount);
+        
+
+    
+        if (cleancount >= 1){
+        showImage(document.getElementById("myImage2"));
+        }else{
+        hideImage(document.getElementById("myImage2"));
+        }
+   })
+  
+
+    document.getElementById("drink").addEventListener("click", function() {
+        drinkcount += 1;
+        drinkupdatecount();
+        console.log(drinkcount);
+
+        if (drinkcount >= 1){
+        showImage(document.getElementById("myImage3"));
+        }else{
+            hideImage(document.getElementById("myImage3"));
+        }
+    })
+
+
+    document.getElementById("read").addEventListener("click", function() {
+        readcount += 1; 
+        readupdatecount();
+        console.log(readcount);
+
+        if (readcount >= 1){
+        showImage(document.getElementById("myImage4"));
+        } else{
+            hideImage(document.getElementById("myImage4"));
+        }
+    })
+
+    document.getElementById("exercise").addEventListener("click", function() {
+        exercisecount += 1;
+        exerciseupdatecount();
+        console.log(exercisecount);
+
+        if (exercisecount >= 1){
+        showImage(document.getElementById("myImage5"));
+        }else{
+            hideImage(document.getElementById("myImage5"));
+        }
+    })
+
+    document.getElementById("reflection").addEventListener("click", function() {
+        reflectioncount +=1;
+        reflectionupdatecount();
+        console.log(reflectioncount);
+
+
+        if (reflectioncount >= 1){
+        showImage(document.getElementById("myImage6"));
+        }else{
+            hideImage(document.getElementById("myImage6"));
+        }
+    })
+
+
+    document.getElementById("walk").addEventListener("click", function() {
+        walkcount+=1;
+        walkupdatecount();
+        console.log(walkcount);
+
+        if (walkcount >= 1){
+        showImage(document.getElementById("myImage7"));
+        }  else{
+        hideImage(document.getElementById("myImage7"));
+        }
+    })
+
+
+
+
+    
+    </script>
+
+
+
+
+   
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
