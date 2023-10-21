@@ -1,3 +1,117 @@
+// Define the self-care objects
+var exercise = {
+    achieved: false,
+    value: 0
+};
+
+var water = {
+    achieved: false,
+    value: 0
+};
+
+var sleep = {
+    achieved: false,
+    value: 0
+};
+
+var clean = {
+    achieved: false,
+    value: 0
+};
+
+var reflection = {
+    achieved: false,
+    value: 0
+};
+
+var read = {
+    achieved: false,
+    value: 0
+};
+
+var walk = {
+    achieved: false,
+    value: 0
+};
+
+// Access the attributes of the objects
+console.log("Exercise Achieved: " + exercise.achieved);
+console.log("Water Value: " + water.value);
+// ... repeat for the other self-care activities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const apiKey = 'a2b62026054742ba9987d42c28b937fc';
 
 // Function to fetch weather data
