@@ -31,6 +31,7 @@ function App() {
         Today I...
       </div>
       <div className = "checkbox_container">
+        <button type="button" className="plus_minus_button" onClick={minusClicked}> - </button>
         <input type="checkbox" text="Exercised" className="checkbox"></input>
           Exercised
         <input type="checkbox" text="Exercised" className="checkbox"></input>
