@@ -1,8 +1,5 @@
 // Define the self-care objects
-var exercise = {
-  achieved: false,
-  value: 0
-};
+
 
 var water = {
     achieved: false,
@@ -34,12 +31,35 @@ var walk = {
     value: 0
 };
 
+document.getElementById('exerciseStatus'.innerHTML = exercise.achieved);
+
 function logExerciseStatus() {
-  console.log("Exercise Achieved: " + exercise.achieved);
+  console.log("Exercise ???? Achieved: " + exercise.achieved);
 }
 
 
+var exercise = {
+  achieved: false,
+  value: 0
+};
+// Access the attributes of the objects and update the HTML
 
+/*
+
+function App() {
+  var exerciseStatus = document.getElementById("exerciseStatus");
+  exerciseStatus.textContent += exercise.achieved ? "Yes" : "No";
+
+  return {
+    <div>
+    <p id="exerciseStatus">Exercise ??Achieved: </p>
+    <p id="waterStatus">Water ??Achieved: </p>
+    </div>
+    }
+
+}
+*/
+ 
 
 
 

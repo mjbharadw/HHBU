@@ -3,11 +3,14 @@
 <html>
 <head>
     <title>Self-Care Activities</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="weatherapp.css" />
 </head>
 <body>
     <h1>Self-Care Activities</h1>
     
-    <p id="exerciseStatus">Exercise Achieved: </p>
+    <p id="exerciseStatus">Exercise ??Achieved: </p>
+    <p id="waterStatus">Water ??Achieved: </p>
     
     <!-- Rest of your content here -->
     
@@ -17,10 +20,22 @@
             achieved: false,
             value: 0
         };
- 
+     
+
+
         // Access the attributes of the objects and update the HTML
         var exerciseStatus = document.getElementById("exerciseStatus");
         exerciseStatus.textContent += exercise.achieved ? "Yes" : "No";
+
+        // Your self-care objects
+        var water = {
+            achieved: false,
+            value: 0
+        };
+ 
+        // Access the attributes of the objects and update the HTML
+        var waterStatus = document.getElementById("waterStatus");
+        waterStatus.textContent += water.achieved ? "Yes" : "No";
 
        
     </script>
