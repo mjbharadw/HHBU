@@ -3,42 +3,42 @@ import React, {useState} from 'react';
 
 function App() {
 
-  const [exercised, setExercised] = useState(0);
-  const [slept, setSlept] = useState(0);
-  const [reflected, setReflected] = useState(0);
-  const [read, setRead] = useState(0);
-  const [walked, setWalked] = useState(0);
-  const [cleaned, setCleaned] = useState(0);
+  const [exercised, setExercised] = useState(false);
+  const [slept, setSlept] = useState(false);
+  const [reflected, setReflected] = useState(false);
+  const [read, setRead] = useState(false);
+  const [nature, setNature] = useState(false);
+  const [cleaned, setCleaned] = useState(false);
   const [waterDrank, setWaterDrank] = useState(0);
 
   const handleExercisedClicked = () =>
   {
-    setExercised(exercised + 1);
+    setExercised(true);
   }
 
   const handleSleptClicked = () =>
   {
-    setSlept(slept + 1);
+    setSlept(true);
   }
 
   const handleReflectedClicked = () =>
   {
-    setReflected(reflected + 1);
+    setReflected(true);
   }
 
   const handleReadClicked = () =>
   {
-    setRead(read + 1);
+    setRead(true);
   }
 
-  const handleWalkedClicked = () =>
+  const handleNatureClicked = () =>
   {
-    setWalked(walked + 1);
+    setNature(true);
   }
 
   const handleCleanedClicked = () =>
   {
-    setCleaned(cleaned + 1);
+    setCleaned(true);
   }
 
   const plusClicked = () =>
@@ -65,7 +65,7 @@ function App() {
         <button type="button" className="button" onClick={handleSleptClicked}> Slept </button>
         <button type="button" className="button" onClick={handleReflectedClicked}> Reflected </button>
         <button type="button" className="button" onClick={handleReadClicked}> Read </button>
-        <button type="button" className="button" onClick={handleWalkedClicked}> Walked </button>
+        <button type="button" className="button" onClick={handleNatureClicked}> Nature </button>
         <button type="button" className="button" onClick={handleCleanedClicked}> Cleaned </button>
           {waterDrank == 1 ? "Drank 1 Cup of Water" : "Drank " + waterDrank + " Cups of Water" }
           <div>
@@ -74,12 +74,12 @@ function App() {
           </div>
       </div>
       <div>
-      {exercised}
-      {slept}
-      {reflected}
-      {read}
-      {walked}
-      {cleaned}
+      Exercised: {exercised ? 'true' : 'false'} <br />
+      Slept: {exercised ? 'true' : 'false'} <br />
+      Enjoyed Nature: {exercised ? 'true' : 'false'} <br />
+      Read: {exercised ? 'true' : 'false'} <br />
+      Cleaned: {exercised ? 'true' : 'false'} <br />
+      Reflected: {exercised ? 'true' : 'false'} <br />
       </div>
     </div>
   );
