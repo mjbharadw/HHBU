@@ -3,44 +3,87 @@ import React, {useState} from 'react';
 
 function App() {
 
-  const [exercised, setExercised] = useState(0);
-  const [slept, setSlept] = useState(0);
-  const [reflected, setReflected] = useState(0);
-  const [read, setRead] = useState(0);
-  const [wentOutside, setWentOutside] = useState(0);
-  const [cleaned, setCleaned] = useState(0);
+  const [exercised, setExercised] = useState(false);
+  const [slept, setSlept] = useState(false);
+  const [reflected, setReflected] = useState(false);
+  const [read, setRead] = useState(false);
+  const [nature, setNature] = useState(false);
+  const [cleaned, setCleaned] = useState(false);
   const [waterDrank, setWaterDrank] = useState(0);
   const [timer, setTimer] = useState(0);
+  var exerciseTimer;
 
   const handleExercisedClicked = () =>
-  {
-    setExercised(exercised + 1);
-    setInterval(updateTimerBySecond, 1000)
+  { 
+    if (exercised) 
+    {
+      setExercised(false);
+      exerciseTimer = setInterval(updateTimerBySecond, 1000)
+    } 
+    else 
+    {
+      setExercised(true);
+      clearInterval(exerciseTimer);
+    }
   }
 
   const handleSleptClicked = () =>
   {
-    setSlept(slept + 1);
+    if (slept) 
+    {
+      setSlept(false);
+    } 
+    else 
+    {
+      setSlept(true);
+    }
   }
 
   const handleReflectedClicked = () =>
   {
-    setReflected(reflected + 1);
+    if (reflected) 
+    {
+      setReflected(false);
+    } 
+    else 
+    {
+      setReflected(true);
+    }
   }
 
   const handleReadClicked = () =>
   {
-    setRead(read + 1);
+    if (read) 
+    {
+      setRead(false);
+    } 
+    else 
+    {
+      setRead(true);
+    }
   }
 
-  const handleWentOutsideClicked = () =>
+  const handleNatureClicked = () =>
   {
-    setWentOutside(wentOutside + 1);
+    if (nature) 
+    {
+      setNature(false);
+    } else 
+    {
+      setNature(true);
+    }
   }
 
   const handleCleanedClicked = () =>
   {
-    setCleaned(cleaned + 1);
+    if (cleaned) 
+    {
+      setCleaned(false);
+    } 
+    else 
+    {
+      setCleaned(true);
+    }
   }
 
   const plusClicked = () =>
@@ -50,7 +93,10 @@ function App() {
 
   const minusClicked = () =>
   {
-    setWaterDrank(waterDrank - 1);
+    if (waterDrank != 0) 
+    {
+      setWaterDrank(waterDrank - 1);
+    } 
   }
 
   function updateTimerBySecond()
@@ -72,7 +118,7 @@ function App() {
         <button type="button" className="button" onClick={handleSleptClicked}> Slept 7-10 Hours </button>
         <button type="button" className="button" onClick={handleReflectedClicked}> Reflected </button>
         <button type="button" className="button" onClick={handleReadClicked}> Read </button>
-        <button type="button" className="button" onClick={handleWentOutsideClicked}> Went Outside </button>
+        <button type="button" className="button" onClick={handleNatureClicked}> Nature </button>
         <button type="button" className="button" onClick={handleCleanedClicked}> Cleaned </button>
           {waterDrank == 1 ? "Drank 1 Cup of Water" : "Drank " + waterDrank + " Cups of Water" }
           <div>
@@ -81,7 +127,16 @@ function App() {
           </div>
       </div>
       <div>
-      {exercised > 0 ? timer : null}
+      Exercised: {exercised ? 'true' : 'false'} <br />
+      Slept: {slept ? 'true' : 'false'} <br />
+      Reflected: {reflected ? 'true' : 'false'} <br />
+      Read: {read ? 'true' : 'false'} <br />
+      Enjoyed Nature: {nature ? 'true' : 'false'} <br />
+      Cleaned: {cleaned ? 'true' : 'false'} <br />
+
+      {exerciseTimer != null ? exerciseTimer : null}
+
+      
       </div>
     </div>
   );
