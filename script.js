@@ -1,7 +1,7 @@
 // Define the self-care objects
 var exercise = {
-    achieved: false,
-    value: 0
+  achieved: false,
+  value: 0
 };
 
 var water = {
@@ -34,11 +34,9 @@ var walk = {
     value: 0
 };
 
-// Access the attributes of the objects
-console.log("Exercise Achieved: " + exercise.achieved);
-console.log("Water Value: " + water.value);
-// ... repeat for the other self-care activities
-
+function logExerciseStatus() {
+  console.log("Exercise Achieved: " + exercise.achieved);
+}
 
 
 
