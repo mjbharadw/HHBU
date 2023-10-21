@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-image: url("../IMG_0996.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vmin;
 }
 
 .title

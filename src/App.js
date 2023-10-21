@@ -10,61 +10,78 @@ function App() {
   const [nature, setNature] = useState(false);
   const [cleaned, setCleaned] = useState(false);
   const [waterDrank, setWaterDrank] = useState(0);
+  const [timer, setTimer] = useState(0);
+  var exerciseTimer;
 
   const handleExercisedClicked = () =>
-  {
-    
-    if (exercised) {
+  { 
+    if (exercised) 
+    {
       setExercised(false);
-    } else {
+      exerciseTimer = setInterval(updateTimerBySecond, 1000)
+    } 
+    else 
+    {
       setExercised(true);
+      clearInterval(exerciseTimer);
     }
-
-
   }
 
   const handleSleptClicked = () =>
   {
-
-    if (slept) {
+    if (slept) 
+    {
       setSlept(false);
-    } else {
+    } 
+    else 
+    {
       setSlept(true);
     }
   }
 
   const handleReflectedClicked = () =>
   {
-    if (reflected) {
+    if (reflected) 
+    {
       setReflected(false);
-    } else {
+    } 
+    else 
+    {
       setReflected(true);
     }
   }
 
   const handleReadClicked = () =>
   {
-    if (read) {
+    if (read) 
+    {
       setRead(false);
-    } else {
+    } 
+    else 
+    {
       setRead(true);
     }
   }
 
   const handleNatureClicked = () =>
   {
-    if (nature) {
+    if (nature) 
+    {
       setNature(false);
-    } else {
+    } else 
+    {
       setNature(true);
     }
   }
 
   const handleCleanedClicked = () =>
   {
-    if (cleaned) {
+    if (cleaned) 
+    {
       setCleaned(false);
-    } else {
+    } 
+    else 
+    {
       setCleaned(true);
     }
   }
@@ -76,16 +93,15 @@ function App() {
 
   const minusClicked = () =>
   {
-    
-
-    if (waterDrank != 0) {
+    if (waterDrank != 0) 
+    {
       setWaterDrank(waterDrank - 1);
-    } else {
-      
-    }
+    } 
+  }
 
-
-
+  function updateTimerBySecond()
+  {
+    setTimer(timer + 1);
   }
 
 
@@ -99,7 +115,7 @@ function App() {
       </div>
       <div className = "button_container">
         <button type="button" className="button" onClick={handleExercisedClicked}> Exercised </button>
-        <button type="button" className="button" onClick={handleSleptClicked}> Slept </button>
+        <button type="button" className="button" onClick={handleSleptClicked}> Slept 7-10 Hours </button>
         <button type="button" className="button" onClick={handleReflectedClicked}> Reflected </button>
         <button type="button" className="button" onClick={handleReadClicked}> Read </button>
         <button type="button" className="button" onClick={handleNatureClicked}> Nature </button>
@@ -116,8 +132,10 @@ function App() {
       Reflected: {reflected ? 'true' : 'false'} <br />
       Read: {read ? 'true' : 'false'} <br />
       Enjoyed Nature: {nature ? 'true' : 'false'} <br />
-     
       Cleaned: {cleaned ? 'true' : 'false'} <br />
+
+      {exerciseTimer != null ? exerciseTimer : null}
+
       
       </div>
     </div>
