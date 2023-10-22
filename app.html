@@ -19,14 +19,24 @@
         <h2 id="walkcounter">0</h2>
       </div>
 
-
-    <button type="button" id ="sleep">Sleep</button>
-    <button id ="clean">Clean</button>
-    <button id ="drink">Drink</button>
-    <button id ="read">Read</button>
-    <button id ="exercise">Exercise</button>
-    <button id ="reflection">Reflection</button>
-    <button id ="walk">Walk</button>
+    <div> 
+        <button id ="sleep" className="button">Sleep</button>
+        <button id ="clean" className="button" >Clean</button>
+        <button id ="drink" className="button">Drink</button>
+        <button id ="read" className="button">Read</button>
+        <button id ="exercise" className="button">Exercise</button>
+        <button id ="reflection" className="button">Reflection</button>
+        <button id ="walk" className="button">Walk</button>
+    </div>
+    <div className="minus_button"> 
+        <button id ="sleep" class="minus_button">-</button>
+        <button id ="clean" class="minus_button">-</button>
+        <button id ="drink" class="minus_button">-</button>
+        <button id ="read" class="minus_button">-</button>
+        <button id ="exercise" class="minus_button">-</button>
+        <button id ="reflection" class="minus_button">-</button>
+        <button id ="walk" class="minus_button">-</button>
+    </div>
 
     <div class="images">   
          <img class="img1" id="myImage1" src="img1.png" alt="Image" style.visibility = "hidden">
@@ -37,11 +47,11 @@
          <img class="img6" id="myImage6" src="img6.png" alt="Image" style.visibility = "hidden";>
          <img class="img7" id="myImage7" src="img7.png" alt="Image" style.visibility = "hidden";>
      </div>
+     <h2 id="timer">0</h2>
   
     
 </body>
 <script>
-
 
     let sleepcount =0;
     let cleancount =0;
@@ -116,6 +126,8 @@
         }else{
             hideImage(document.getElementById("myImage1"));
         }
+
+        setInterval(startTimer, 1000);
    })
 
    
